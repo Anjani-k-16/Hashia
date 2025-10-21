@@ -1,15 +1,29 @@
-# SecurePass-Checker: A Multi-Layered Password Analysis Tool
+Hashia: Cryptographic Integrity Check 
 
-## Project Summary
-This Python-based tool analyzes password strength by employing **three distinct security metrics**:
-1. **Complexity Scoring:** Numerical score based on length and character set variety (upper/lower/digits/special).
-2. **Shannon Entropy Calculation:** A mathematical measure (in bits) of the password's randomness and attack difficulty.
-3. **Breach Lookup:** Integration with the **Have I Been Pwned (HIBP) API** using **k-anonymity** to check if the password has appeared in any public data breach.
+Real-Time Security Audit & Threat Intelligence
 
-## Core Security Features (For Resume Highlight)
-* **Threat Intelligence Integration:** Prioritizes breach status over complexity. A password is automatically flagged as **COMPROMISED** if it is found in the HIBP database.
-* **Cryptographic Principles:** Demonstrates understanding of entropy, a fundamental concept in data security and cryptography.
-* **Privacy-Preserving API Usage:** Utilizes the k-anonymity model (only sending the first 5 characters of the SHA-1 hash) to protect user input during the breach check.
+Hashia is a modern, single-page web application designed to provide a comprehensive multi-layered security audit of potential passwords. It moves beyond basic strength scores by integrating cryptographic analysis and global threat intelligence.
+
+The system performs three critical checks in real-time, ensuring client-side verification so the plain text password never leaves your browser:
+
+Strength Score (zxcvbn): Assesses the password's resistance to modern cracking methods.
+
+Breach Status (HIBP k-anonymity): Checks the password against known compromised passwords from data breaches.
+
+Entropy (bits): Provides a mathematical measure of the password's true cryptographic randomness.
+
+Prerequisites
+
+This project is a pure frontend web application and requires only a modern web browser to run.
+
+The application leverages the following key external libraries:
+
+Tailwind CSS: For utility-first styling and responsive design.
+
+zxcvbn Library: For realistic password strength scoring.
+
+Have I Been Pwned (HIBP) API: Used securely for breach checking.
+
 
 ## Setup and Running the Project
 
@@ -28,4 +42,5 @@ This Python-based tool analyzes password strength by employing **three distinct 
 ### Execution
 Run the script from your terminal:
 ```bash
+
 python password_checker.py
