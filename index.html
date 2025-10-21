@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashia</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load zxcvbn library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+    
+    <!-- Load custom CSS AFTER Tailwind -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-3xl font-extrabold text-center mb-1 text-gray-900 flex items-center justify-center">
+            Hashia: Cryptographic Integrity Check
+        </h1>
+        <p class="text-center text-sm text-gray-500 mb-6">
+            Real-Time Security Audit & Threat Intelligence
+        </p>
+
+        <!-- Password Input -->
+        <div class="input-group">
+            <input type="password" id="password-input" placeholder="Enter password to check..." autocomplete="off">
+            <button id="show-password-toggle">Show Password</button>
+        </div>
+
+        <!-- Strength Meter -->
+        <div class="strength-bar-container">
+            <div id="strength-meter"></div>
+        </div>
+
+        <!-- Analysis Summary -->
+        <div class="analysis-summary">
+            <h2 class="text-xl font-bold mb-4 text-gray-800 text-center">Analysis Summary</h2>
+
+            <!-- Overall Security Rating -->
+            <div class="flex justify-between items-center mb-6 pb-4 border-b border-gray-300">
+                <p class="overall-label">Overall Security Rating:</p>
+                <p class="overall-value" id="rating-output">
+                    <span class="awaiting">Awaiting Input</span>
+                </p>
+            </div>
+
+            <h3 class="text-base font-bold text-gray-700 mb-3 text-center">Technical Security Metrics</h3>
+            
+            <div class="metric-grid">
+                
+                <div class="metric-box">
+                    <p class="metric-title">Breach Status (HIBP):</p>
+                    <p class="metric-value" id="breach-output"><span class="awaiting">N/A</span></p>
+                </div>
+
+                <div class="metric-box">
+                    <p class="metric-title">Strength Score (zxcvbn):</p>
+                    <p class="metric-value" id="score-output"><span class="awaiting">N/A</span></p>
+                </div>
+
+                <div class="metric-box">
+                    <p class="metric-title">Estimated Crack Time:</p>
+                    <p class="metric-value" id="crack-time-output"><span class="awaiting">N/A</span></p>
+                </div>
+
+                <div class="metric-box">
+                    <p class="metric-title">Entropy (bits):</p>
+                    <p class="metric-value" id="entropy-output"><span class="awaiting">N/A</span></p>
+                </div>
+
+            </div>
+
+            <div id="suggestions-output" class="mt-4">
+                <!-- Suggestions populated here -->
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
+
+
+
+
+

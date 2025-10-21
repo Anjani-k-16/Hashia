@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    background-color: #0b1f3c; 
+    background-image: url('./password_image.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 0;
+}
+
+.container {
+    width: 660px !important;
+    max-width: 92vw !important;
+    padding: 24px !important;
+    margin: 0 auto !important;
+
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden;
+}
+
+/* Input group */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 2px solid #3b82f6;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.input-group input {
+    flex-grow: 1;
+    padding: 7px 12px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.input-group button {
+    padding: 7px 12px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.input-group button:hover { background-color: #2563eb; }
+
+/* Strength bar */
+.strength-bar-container { height:6px; background-color:#e0e0e0; border-radius:3px; overflow:hidden; margin-bottom:10px; }
+#strength-meter { height:100%; width:0%; transition: width 0.3s ease-in-out, background-color 0.3s; border-radius:3px; }
+
+/* Analysis Summary */
+.analysis-summary { background-color:#f9fafb; padding:6px 10px; border-radius:8px; border:1px solid #e5e7eb; }
+.analysis-summary h2 { font-size:15px; margin-bottom:5px; }
+.analysis-summary h3 { font-size:14px; margin:3px 0; }
+
+/* Metric Grid */
+.metric-grid { display:grid; grid-template-columns:1fr 1fr; gap:4px; margin-top:6px; }
+.metric-box { background-color:white; padding:4px 6px; border-radius:6px; box-shadow:0 1px 2px rgba(0,0,0,0.04); display:flex; flex-direction:column; justify-content:center; align-items:flex-start; }
+.metric-title { font-size:9px; color:#4b5563; margin-bottom:0; font-weight:500; line-height:1.2; }
+
+/* --- FINAL OVERRIDES --- */
+.metric-box .metric-value,
+.metric-box .metric-value span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.overall-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.overall-value,
+.overall-value span {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+/* Metric status colors */
+.awaiting { color:#6b7280; font-style:italic; }
+.checking { color:#f97316; }
+.compromised { color:#dc2626; font-weight:700; }
+.not-found { color:#10b981; font-weight:600; }
+
+.weak { color:#dc3545; }
+.fair { color:#fd7e14; }
+.medium { color:#ffc107; }
+.good { color:#198754; }
+.excellent { color:#0d6efd; }
+
+/* Suggestions */
+#suggestions-output h3 { font-size:14px; font-weight:600; color:#1f2937; margin-bottom:6px; padding-top:4px; border-top:1px dashed #e5e7eb; }
+#suggestions-output ul { list-style:disc; margin-left:18px; color:#4b5563; }
+#suggestions-output li { margin-bottom:3px; font-size:13px; }
+
+/* Responsive */
+@media (max-width:600px) {
+    .container { margin:15px; padding:15px; width:calc(100% - 30px); }
+}
+
