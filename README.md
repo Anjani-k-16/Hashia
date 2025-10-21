@@ -1,6 +1,6 @@
-Hashia: Cryptographic Integrity Check 
+## Hashia: Cryptographic Integrity Check 
 
-Real-Time Security Audit & Threat Intelligence
+### Real-Time Security Audit & Threat Intelligence
 
 Hashia is a modern, single-page web application designed to provide a comprehensive multi-layered security audit of potential passwords. It moves beyond basic strength scores by integrating cryptographic analysis and global threat intelligence.
 
@@ -44,3 +44,4 @@ Run the script from your terminal:
 ```bash
 
 python password_checker.py
+
