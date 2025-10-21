@@ -12,7 +12,9 @@ Breach Status (HIBP k-anonymity): Checks the password against known compromised 
 
 Entropy (bits): Provides a mathematical measure of the password's true cryptographic randomness.
 
-Prerequisites
+## Setup and Running the Project
+
+### Prerequisites
 
 This project is a pure frontend web application and requires only a modern web browser to run.
 
@@ -23,13 +25,6 @@ Tailwind CSS: For utility-first styling and responsive design.
 zxcvbn Library: For realistic password strength scoring.
 
 Have I Been Pwned (HIBP) API: Used securely for breach checking.
-
-
-## Setup and Running the Project
-
-### Prerequisites
-* Python 3.x
-* The `requests` library for API access.
 
 ### Installation
 1.  Clone this repository or download the files.
@@ -44,4 +39,5 @@ Run the script from your terminal:
 ```bash
 
 python password_checker.py
+
 
